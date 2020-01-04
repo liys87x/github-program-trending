@@ -5,7 +5,7 @@ on:
     branches:
       - action
   schedule:
-    - cron: 20 9,17 * * *
+    - cron: 10 8,16 * * *
 
 jobs:
   build:
@@ -18,9 +18,11 @@ jobs:
           python-version: 3.8
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
-      - name: Create local changes
+      - name: Install requirements
         run: |
           pip install -r requirements.txt
+      - name: Execute github-program-trending.py
+        run: |
           python github-program-trending.py
       - name: Commit files
         run: |
