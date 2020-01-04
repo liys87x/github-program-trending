@@ -61,7 +61,7 @@ def statistics_by_spoken_language(spoken_language_code=""):
 
 
 def now():
-    return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    return datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S UTC")
 
 
 if __name__ == '__main__':

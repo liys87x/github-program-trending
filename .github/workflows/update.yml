@@ -3,7 +3,7 @@ name: Daily Update
 on:
   push:
     branches:
-      - action
+      - master
   schedule:
     - cron: 10 8,16 * * *
 
